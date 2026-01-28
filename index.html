@@ -1,93 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Aventra Business Solutions | Out-of-Hours Support</title>
-  <meta name="description" content="UK-based out-of-hours contact centre and admin support. Reliable, scalable, on-brand business support.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aventra Business Solutions provides UK-based out-of-hours call handling, admin support, and overflow services for property, trades, healthcare, and professional sectors." />
+    <title>Aventra Business Solutions | Professional UK-Based Call Handling & Support</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f9fb;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .hero {
+            padding: 120px 40px;
+            background: linear-gradient(to bottom right, #1a1f36, #2d3655);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+        }
+
+        .btn-primary {
+            background: #4a6cf7;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1a1f36;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 80px 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .features, .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .testimonials {
+            background: #eef1f7;
+            padding: 80px 40px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            font-style: italic;
+        }
+
+        footer {
+            background: #1a1f36;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #9bb1ff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
-    <div class="logo-wrap">
-      <img src="aventra-logo.png" alt="Aventra Business Solutions logo">
+    <div class="logo">
+        <strong>Aventra Business Solutions</strong>
     </div>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="services.html">Services</a>
-      <a href="sectors.html">Sectors</a>
-      <a href="why-aventra.html">Why Aventra</a>
-      <a href="contact.html">Contact</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="sectors.html">Sectors</a>
+        <a href="why-aventra.html">Why Aventra</a>
+        <a href="contact.html">Contact</a>
     </nav>
-
-    <a href="contact.html" class="nav-cta">Book a discovery call</a>
-  </div>
 </header>
 
 <section class="hero">
-  <div class="container">
-    <h1 class="hero-title">
-      Business support that works<br>
-      <span>long after your office closes.</span>
-    </h1>
-
-    <p class="hero-subtitle">
-      Out-of-hours contact centre and admin support that protects your brand,
-      supports your customers and gives your team breathing room.
-    </p>
-
-    <button class="btn-primary" onclick="location.href='contact.html'">
-      Get a free assessment
-    </button>
-  </div>
+    <h1>Professional UK-Based Call Handling & Business Support</h1>
+    <p>Reliable out-of-hours, overflow, and admin support tailored to your business — with no long-term contracts.</p>
+    <a href="contact.html" class="btn-primary">Get a Free Assessment</a>
+    <a href="contact.html" class="btn-secondary">Book a Discovery Call</a>
 </section>
 
-<section class="container testimonials">
-  <h2>Trusted by busy teams</h2>
-
-  <div class="testimonial-grid">
-    <div class="testimonial">
-      “Aventra feels like an extension of our team. Seamless, professional and reliable.”
-      <strong>Operations Manager, Property Services</strong>
+<section class="section">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="card">
+            <h3>1. Discovery</h3>
+            <p>We learn about your business, workflows, and customer needs.</p>
+        </div>
+        <div class="card">
+            <h3>2. Setup</h3>
+            <p>We build your scripts, escalation paths, and communication preferences.</p>
+        </div>
+        <div class="card">
+            <h3>3. Go Live</h3>
+            <p>Your service activates — we handle calls exactly as your team would.</p>
+        </div>
+        <div class="card">
+            <h3>4. Ongoing Support</h3>
+            <p>We refine processes, provide reporting, and scale with your business.</p>
+        </div>
     </div>
-
-    <div class="testimonial">
-      “We finally stopped missing calls overnight — and our clients noticed.”
-      <strong>Director, Professional Services Firm</strong>
-    </div>
-
-    <div class="testimonial">
-      “Flexible support without long contracts. Exactly what we needed.”
-      <strong>Founder, SME</strong>
-    </div>
-  </div>
 </section>
 
-<section class="container">
-  <div class="cta-band">
-    <h2>Let’s design the right support for your business</h2>
-    <p>No obligation. No pressure. Just clarity.</p>
-    <a href="contact.html" class="btn-light">Book a discovery call</a>
-  </div>
+<section class="section">
+    <h2>Our Core Services</h2>
+    <div class="features">
+        <div class="card">
+            <h3>Out-of-Hours Call Handling</h3>
+            <p>24/7 coverage with trained UK-based agents following your exact instructions.</p>
+        </div>
+        <div class="card">
+            <h3>Overflow Support</h3>
+            <p>When your team is busy, we step in seamlessly to keep response times high.</p>
+        </div>
+        <div class="card">
+            <h3>Admin & Back Office</h3>
+            <p>Inbox management, scheduling, customer updates, and more.</p>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="features">
+        <div class="testimonial">
+            “Aventra transformed our out-of-hours process. Our tenants get faster responses and our team sleeps better.”
+            <br><strong>— Property Manager</strong>
+        </div>
+        <div class="testimonial">
+            “Professional, reliable, and incredibly easy to work with. They feel like part of our team.”
+            <br><strong>— Healthcare Provider</strong>
+        </div>
+        <div class="testimonial">
+            “We’ve reduced missed calls by 90%. Couldn’t recommend them more.”
+            <br><strong>— Trade Services Director</strong>
+        </div>
+    </div>
 </section>
 
 <footer>
-  <div class="container">
-    <p>© <span id="year"></span> Aventra Business Solutions</p>
-  </div>
+    <p>© 2026 Aventra Business Solutions</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="why-aventra.html">Why Aventra</a></p>
 </footer>
-
-<script src="script.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
