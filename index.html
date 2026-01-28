@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -60,29 +60,14 @@
     }
 
     .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+      width: 200px;
     }
 
     .logo-wrap img {
       height: 80px;
-      width: auto;
-    }
-
-    .logo-text-main {
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      font-size: 1rem;
-      text-transform: uppercase;
-      color: var(--primary);
-    }
-
-    .logo-text-sub {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      color: var(--muted);
-      letter-spacing: 0.16em;
+      width: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .nav-links {
@@ -109,9 +94,14 @@
       font-weight: 600;
     }
 
+    .nav-cta:hover {
+      background: var(--primary-light);
+    }
+
     /* HERO */
     .hero {
-      padding: 3rem 0 2rem;
+      background: radial-gradient(circle at top left, #e0edff 0, #f5f7fb 40%, #f5f7fb 100%);
+      padding: 4rem 0 3rem;
     }
 
     .hero-grid {
@@ -121,12 +111,20 @@
       align-items: center;
     }
 
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
     .hero-title {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       line-height: 1.15;
       color: var(--primary);
       margin-bottom: 1rem;
-      margin-top: -1rem;
     }
 
     .hero-title span {
@@ -138,6 +136,29 @@
       color: var(--muted);
       max-width: 32rem;
       margin-bottom: 1.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
     }
 
     .btn-primary {
@@ -168,6 +189,11 @@
 
     .btn-ghost:hover {
       background: #e5edff;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
     }
 
     /* HERO RIGHT BOX */
@@ -252,7 +278,7 @@
     }
 
     .section-title {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: var(--primary);
       margin-bottom: 0.5rem;
     }
@@ -472,6 +498,7 @@
 
     .footer-links {
       list-style: none;
+      padding-left: 0;
     }
 
     .footer-links li {
@@ -510,319 +537,294 @@
         display: none;
       }
     }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .cta-band {
+        padding: 1.5rem 1.6rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="container">
-    <nav class="nav">
-      <div class="logo-wrap">
-        <img src="aventra-logo.png" alt="Aventra Business Solutions logo" />
-        <div>
-          <div class="logo-text-main">AVENTRA</div>
-          <div class="logo-text-sub">BUSINESS SOLUTIONS</div>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="logo-wrap">
+          <img src="https://aventra-logo.png" alt="Aventra Business Solutions logo" />
         </div>
-      </div>
 
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#sectors">Sectors</a>
-        <a href="#why">Why Aventra</a>
-        <a href="#contact">Contact</a>
-      </div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#sectors">Sectors</a>
+          <a href="#why">Why Aventra</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-      <a href="#contact" class="nav-cta">Book a discovery call</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-
-    <!-- LEFT -->
-    <div>
-      <h1 class="hero-title">
-        Extra capacity for your business,<br />
-        <span>exactly when you need it.</span>
-      </h1>
-
-      <p class="hero-subtitle">
-        Aventra Business Solutions provides reliable out-of-hours contact centre and administration assistance,
-        so your customers are supported and your back office keeps moving—long after the lights go off.
-      </p>
-
+        <a href="#contact" class="nav-cta">Book a discovery call</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- RIGHT -->
-    <div>
-      <div class="hero-card">
-        <div class="hero-card-title">Operational at every hour that matters</div>
-
-        <div class="hero-metric">
-          <div class="hero-metric-label">Coverage</div>
-          <div class="hero-metric-value">24/7</div>
-        </div>
-
-        <div class="hero-metric">
-          <div class="hero-metric-label">Support channels</div>
-          <div class="hero-metric-value">Phone · Email · Web</div>
-        </div>
-
-        <div class="hero-divider"></div>
-
-        <ul class="hero-list">
-          <li><span class="hero-dot"></span> Out-of-hours call handling and message taking</li>
-          <li><span class="hero-dot"></span> Overflow support during peak times</li>
-          <li><span class="hero-dot"></span> Admin assistance and back-office processing</li>
-          <li><span class="hero-dot"></span> Tailored scripts, SLAs and reporting</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    <!-- RIGHT -->
-    <div>
-      <div class="hero-card">
-        <div class="hero-card-title">Operational at every hour that matters</div>
-
-        <div class="hero-metric">
-          <div class="hero-metric-label">Coverage</div>
-          <div class="hero-metric-value">24/7</div>
-        </div>
-
-        <div class="hero-metric">
-          <div class="hero-metric-label">Support channels</div>
-          <div class="hero-metric-value">Phone · Email · Web</div>
-        </div>
-
-        <div class="hero-divider"></div>
-
-        <ul class="hero-list">
-          <li><span class="hero-dot"></span> Out-of-hours call handling and message taking</li>
-          <li><span class="hero-dot"></span> Overflow support during peak times</li>
-          <li><span class="hero-dot"></span> Admin assistance and back-office processing</li>
-          <li><span class="hero-dot"></span> Tailored scripts, SLAs and reporting</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-kicker">What we do</div>
-      <h2 class="section-title">Out-of-hours contact and admin, done properly.</h2>
-      <p class="section-subtitle">
-        We plug into your existing operation as an extension of your team—protecting your brand, your customers,
-        and your time.
-      </p>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="card-icon">☎</div>
-        <h3 class="card-title">Out-of-hours contact centre</h3>
-        <p class="card-text">
-          Professional call handling when your in-house team is offline. We follow your scripts, escalation paths
-          and tone of voice to keep every interaction on-brand.
-        </p>
-        <div class="pill-row">
-          <span class="pill">Message taking</span>
-          <span class="pill">Escalations</span>
-          <span class="pill">Emergency lines</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">📋</div>
-        <h3 class="card-title">Admin & back-office support</h3>
-        <p class="card-text">
-          From inbox management and data entry to booking updates and simple case handling, we keep your admin
-          moving while your team focuses on higher-value work.
-        </p>
-        <div class="pill-row">
-          <span class="pill">Inbox triage</span>
-          <span class="pill">Data entry</span>
-          <span class="pill">Case updates</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">⚙</div>
-        <h3 class="card-title">Overflow & campaign support</h3>
-        <p class="card-text">
-          Need extra capacity for a campaign, seasonal spike or project? We provide flexible, scalable support
-          without the long-term headcount commitment.
-        </p>
-        <div class="pill-row">
-          <span class="pill">Overflow cover</span>
-          <span class="pill">Seasonal peaks</span>
-          <span class="pill">Project support</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SECTORS & USE CASES -->
-<section id="sectors">
-  <div class="container split">
-    <div>
-      <h2 class="split-title">Built for busy teams that can’t afford to switch off.</h2>
-      <p class="split-text">
-        Whether you’re managing customers, tenants, patients or clients, Aventra Business Solutions gives you confidence that every call and request is handled with care—even when your office is closed.
-      </p>
-      <ul class="check-list">
-        <li><span class="check-icon">✓</span><span>Professional services: accountants, legal, consultants and agencies.</span></li>
-        <li><span class="check-icon">✓</span><span>Property and facilities: maintenance lines, tenant support, contractors.</span></li>
-        <li><span class="check-icon">✓</span><span>Healthcare and wellbeing: non-clinical admin and contact handling.</span></li>
-        <li><span class="check-icon">✓</span><span>SMEs that need extra hands without extra headcount.</span></li>
-      </ul>
-    </div>
-    <div>
-      <div class="panel panel-highlight">
-        <div class="panel-label">Typical engagement</div>
-        <div class="panel-main">
-          We start with a discovery call, map your workflows and escalation paths, then build scripts and processes that mirror your in-house standards. Once you’re happy, we go live with clear SLAs and reporting agreed upfront.
-        </div>
-        <div class="panel-meta">
-          • Discovery & design · • Pilot period · • Full rollout · • Ongoing optimisation
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY AVENTRA -->
-<section id="why">
-  <div class="container split split-alt">
-    <div>
-      <div class="panel">
-        <div class="panel-label">Service promise</div>
-        <div class="panel-main">
-          We behave like an extension of your team—not a bolt-on call centre. That means consistent tone of voice, clear communication, and a focus on outcomes, not just call volumes.
-        </div>
-        <div class="panel-meta">
-          We’ll work with you to define what “good” looks like, then report against it regularly.
-        </div>
-      </div>
-    </div>
-    <div>
-      <h2 class="split-title">Why Aventra Business Solutions?</h2>
-      <p class="split-text">
-        You don’t just need someone to “answer the phones”. You need a partner who understands your business, protects your reputation and gives you back time and headspace.
-      </p>
-      <ul class="check-list">
-        <li><span class="check-icon">✓</span><span>Out-of-hours and overflow cover tailored to your operation.</span></li>
-        <li><span class="check-icon">✓</span><span>Clear, transparent pricing with no hidden extras.</span></li>
-        <li><span class="check-icon">✓</span><span>Scripts, processes and reporting aligned to your KPIs.</span></li>
-        <li><span class="check-icon">✓</span><span>Scalable support as your business grows or peaks seasonally.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section id="contact">
-  <div class="container">
-    <div class="cta-band">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
       <div>
-        <h2 class="cta-title">Ready to add extra capacity to your business?</h2>
-        <p class="cta-text">
-          Share a few details about your operation and we’ll arrange a no-obligation discovery call to explore how Aventra Business Solutions can support you.
+        <div class="hero-kicker">Out-of-hours contact & admin support</div>
+        <h1 class="hero-title">
+          Extra capacity for your business,<br />
+          <span>exactly when you need it.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Aventra Business Solutions provides reliable out-of-hours contact centre and administration assistance,
+          so your customers are supported and your back office keeps moving—long after the lights go off.
         </p>
+        <div class="hero-badges">
+          <div class="badge">Out-of-hours & overflow cover</div>
+          <div class="badge">UK-based support</div>
+          <div class="badge">Flexible, scalable solutions</div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a call</button>
+          <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View our services</button>
+          <span class="hero-note">Typical onboarding in as little as 10–15 working days.</span>
+        </div>
       </div>
-      <div class="cta-actions">
-        <button class="btn-light">Book a discovery call</button>
-        <button class="btn-outline-light">Request a callback</button>
+      <div>
+        <div class="hero-card">
+          <div class="hero-card-title">Operational at every hour that matters</div>
+          <div class="hero-metric">
+            <div class="hero-metric-label">Coverage</div>
+            <div class="hero-metric-value">24/7</div>
+          </div>
+          <div class="hero-metric">
+            <div class="hero-metric-label">Support channels</div>
+            <div class="hero-metric-value">Phone · Email · Web</div>
+          </div>
+          <div class="hero-divider"></div>
+          <ul class="hero-list">
+            <li><span class="hero-dot"></span> Out-of-hours call handling and message taking</li>
+            <li><span class="hero-dot"></span> Overflow support during peak times</li>
+            <li><span class="hero-dot"></span> Admin assistance and back-office processing</li>
+            <li><span class="hero-dot"></span> Tailored scripts, SLAs and reporting</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div style="margin-top: 2rem;" class="split">
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">What we do</div>
+        <h2 class="section-title">Out-of-hours contact and admin, done properly.</h2>
+        <p class="section-subtitle">
+          We plug into your existing operation as an extension of your team—protecting your brand, your customers, and your time.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">☎</div>
+          <h3 class="card-title">Out-of-hours contact centre</h3>
+          <p class="card-text">
+            Professional call handling when your in-house team is offline. We follow your scripts, escalation paths and tone of voice to keep every interaction on-brand.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Message taking</span>
+            <span class="pill">Escalations</span>
+            <span class="pill">Emergency lines</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3 class="card-title">Admin & back-office support</h3>
+          <p class="card-text">
+            From inbox management and data entry to booking updates and simple case handling, we keep your admin moving while your team focuses on higher-value work.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Inbox triage</span>
+            <span class="pill">Data entry</span>
+            <span class="pill">Case updates</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙</div>
+          <h3 class="card-title">Overflow & campaign support</h3>
+          <p class="card-text">
+            Need extra capacity for a campaign, seasonal spike or project? We provide flexible, scalable support without the long-term headcount commitment.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Overflow cover</span>
+            <span class="pill">Seasonal peaks</span>
+            <span class="pill">Project support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORS & USE CASES -->
+  <section id="sectors">
+    <div class="container split">
       <div>
-        <h3 class="split-title">Tell us about your requirements</h3>
+        <h2 class="split-title">Built for busy teams that can’t afford to switch off.</h2>
         <p class="split-text">
-          Use the form below as a starting point. We’ll follow up to clarify anything we need and share a tailored proposal.
+          Whether you’re managing customers, tenants, patients or clients, Aventra Business Solutions gives you confidence that every call and request is handled with care—even when your office is closed.
         </p>
-        <form class="contact-form">
-          <div style="margin-bottom: 0.9rem;">
-            <label for="name">Name</label>
-            <input id="name" type="text" />
-          </div>
-          <div style="margin-bottom: 0.9rem;">
-            <label for="company">Company</label>
-            <input id="company" type="text" />
-          </div>
-          <div style="margin-bottom: 0.9rem;">
-            <label for="email">Email</label>
-            <input id="email" type="email" />
-          </div>
-          <div style="margin-bottom: 0.9rem;">
-            <label for="details">How can we help?</label>
-            <textarea id="details" rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Submit enquiry</button>
-        </form>
+        <ul class="check-list">
+          <li><span class="check-icon">✓</span><span>Professional services: accountants, legal, consultants and agencies.</span></li>
+          <li><span class="check-icon">✓</span><span>Property and facilities: maintenance lines, tenant support, contractors.</span></li>
+          <li><span class="check-icon">✓</span><span>Healthcare and wellbeing: non-clinical admin and contact handling.</span></li>
+          <li><span class="check-icon">✓</span><span>SMEs that need extra hands without extra headcount.</span></li>
+        </ul>
       </div>
+      <div>
+        <div class="panel panel-highlight">
+          <div class="panel-label">Typical engagement</div>
+          <div class="panel-main">
+            We start with a discovery call, map your workflows and escalation paths, then build scripts and processes that mirror your in-house standards. Once you’re happy, we go live with clear SLAs and reporting agreed upfront.
+          </div>
+          <div class="panel-meta">• Discovery & design · • Pilot period · • Full rollout · • Ongoing optimisation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY AVENTRA -->
+  <section id="why">
+    <div class="container split split-alt">
       <div>
         <div class="panel">
-          <div class="panel-label">Prefer to talk first?</div>
+          <div class="panel-label">Service promise</div>
           <div class="panel-main">
-            We’re happy to discuss your requirements informally before you commit to anything. Share your preferred time and we’ll work around you.
+            We behave like an extension of your team—not a bolt-on call centre. That means consistent tone of voice, clear communication, and a focus on outcomes, not just call volumes.
           </div>
           <div class="panel-meta">
-            You can also add a note about your current challenges—out-of-hours cover, overflow, admin backlog, or all of the above.
+            We’ll work with you to define what “good” looks like, then report against it regularly.
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="split-title">Why Aventra Business Solutions?</h2>
+        <p class="split-text">
+          You don’t just need someone to “answer the phones”. You need a partner who understands your business, protects your reputation and gives you back time and headspace.
+        </p>
+        <ul class="check-list">
+          <li><span class="check-icon">✓</span><span>Out-of-hours and overflow cover tailored to your operation.</span></li>
+          <li><span class="check-icon">✓</span><span>Clear, transparent pricing with no hidden extras.</span></li>
+          <li><span class="check-icon">✓</span><span>Scripts, processes and reporting aligned to your KPIs.</span></li>
+          <li><span class="check-icon">✓</span><span>Scalable support as your business grows or peaks seasonally.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2 class="cta-title">Ready to add extra capacity to your business?</h2>
+          <p class="cta-text">
+            Share a few details about your operation and we’ll arrange a no-obligation discovery call to explore how Aventra Business Solutions can support you.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn-light">Book a discovery call</button>
+          <button class="btn-outline-light">Request a callback</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;" class="split">
+        <div>
+          <h3 class="split-title">Tell us about your requirements</h3>
+          <p class="split-text">
+            Use the form below as a starting point. We’ll follow up to clarify anything we need and share a tailored proposal.
+          </p>
+          <form class="contact-form" action="mailto:general@aventrabusinesssolutions.com" method="post" enctype="text/plain">
+            <div style="margin-bottom: 0.9rem;">
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required />
+            </div>
+            <div style="margin-bottom: 0.9rem;">
+              <label for="company">Company</label>
+              <input id="company" name="Company" type="text" />
+            </div>
+            <div style="margin-bottom: 0.9rem;">
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" required />
+            </div>
+            <div style="margin-bottom: 0.9rem;">
+              <label for="details">How can we help?</label>
+              <textarea id="details" name="Details" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Submit enquiry</button>
+          </form>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="panel-label">Prefer to talk first?</div>
+            <div class="panel-main">
+              We’re happy to discuss your requirements informally before you commit to anything. Share your preferred time and we’ll work around you.
+            </div>
+            <div class="panel-meta">
+              You can also add a note about your current challenges—out-of-hours cover, overflow, admin backlog, or all of the above.
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">AVENTRA</div>
-        <div class="footer-sub">BUSINESS SOLUTIONS</div>
-        <p> Out-of-hours contact centre and administration assistance for businesses that need extra capacity, without extra headcount. </p>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="https://aventra-logo.png" alt="Aventra Business Solutions logo" style="height: 80px; width: auto;" />
+        </div>
+        <div>
+          <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Out-of-hours contact centre</a></li>
+            <li><a href="#services">Admin & back-office support</a></li>
+            <li><a href="#services">Overflow & campaign support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#why">Why Aventra</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Schedule a call back</a></li>
+            <li><a href="#">Privacy & terms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Services</h4>
-        <ul class="footer-links">
-          <li><a href="#services">Out-of-hours contact centre</a></li>
-          <li><a href="#services">Admin & back-office support</a></li>
-          <li><a href="#services">Overflow & campaign support</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Company</h4>
-        <ul class="footer-links">
-          <li><a href="#why">Why Aventra</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#contact">Schedule a call back</a></li>
-          <li><a href="#">Privacy & terms</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Aventra Business Solutions. All rights reserved.</span>
+        <span>Designed for businesses that can’t afford to switch off.</span>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Aventra Business Solutions. All rights reserved.</span>
-      <span>Designed for businesses that can’t afford to switch off.</span>
-    </div>
-  </div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
-```
