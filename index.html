@@ -66,7 +66,7 @@
     }
 
     .logo-wrap img {
-      height: 80px; /* Bigger logo */
+      height: 80px;
       width: auto;
     }
 
@@ -118,7 +118,7 @@
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
       gap: 3rem;
-      align-items: center; /* Aligns headline with right box */
+      align-items: center;
     }
 
     .hero-title {
@@ -126,7 +126,7 @@
       line-height: 1.15;
       color: var(--primary);
       margin-bottom: 1rem;
-      margin-top: -1rem; /* Moves headline upward */
+      margin-top: -1rem;
     }
 
     .hero-title span {
@@ -232,9 +232,282 @@
       background: var(--accent);
     }
 
+    /* SECTION HEADERS */
+    section {
+      padding: 3.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+
+    /* SERVICES */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+
+    .card-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: #e5edff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--primary);
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: #f3f4ff;
+      color: var(--primary);
+    }
+
+    /* SPLIT SECTIONS */
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .split-alt {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    }
+
+    .split-title {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .split-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .check-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .check-list li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      gap: 0.4rem;
+      align-items: flex-start;
+    }
+
+    .check-icon {
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 0.05rem;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 60%, #1f3f72 100%);
+      color: var(--white);
+      border-radius: 1.25rem;
+      padding: 2rem 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .cta-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .cta-text {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--primary);
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: var(--white);
+      padding: 0.8rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+    }
+
+    /* CONTACT FORM */
+    .contact-form {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+    }
+
+    .contact-form label {
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--muted);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.55rem 0.7rem;
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+      font-size: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0b1220;
+      color: #9ca3af;
+      padding: 2.5rem 0 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 2rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+      margin-bottom: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-sub {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #6b7280;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.35rem;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+    }
+
+    .footer-links a:hover {
+      color: #e5e7eb;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #111827;
+      margin-top: 1.75rem;
+      padding-top: 1rem;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
     @media (max-width: 900px) {
-      .hero-grid {
+      .hero-grid,
+      .grid-3,
+      .split,
+      .split-alt,
+      .footer-grid {
         grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
       }
     }
   </style>
@@ -317,5 +590,33 @@
   </div>
 </section>
 
-</body>
-</html>
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-kicker">What we do</div>
+      <h2 class="section-title">Out-of-hours contact and admin, done properly.</h2>
+      <p class="section-subtitle">
+        We plug into your existing operation as an extension of your team—protecting your brand, your customers,
+        and your time.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">☎</div>
+        <h3 class="card-title">Out-of-hours contact centre</h3>
+        <p class="card-text">
+          Professional call handling when your in-house team is offline. We follow your scripts, escalation paths
+          and tone of voice to keep every interaction on-brand.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Message taking</span>
+          <span class="pill">Escalations</span>
+          <span class="pill">Emergency lines</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h
