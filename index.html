@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aventra Business Solutions</title>
+  <title>Aventra Business Solutions | Out-of-Hours Contact & Admin Support</title>
+
+  <meta name="description"
+        content="UK-based out-of-hours contact centre and admin support. Overflow handling, back-office assistance, and scalable business support—exactly when you need it." />
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Font -->
@@ -17,6 +21,7 @@
       --text: #1f2933;
       --muted: #6b7280;
       --white: #ffffff;
+      --success: #16a34a;
     }
 
     * {
@@ -35,6 +40,12 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    a:focus,
+    button:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
     }
 
     /* HEADER */
@@ -59,15 +70,9 @@
       padding: 1rem 0;
     }
 
-    .logo-wrap {
-      width: 200px;
-    }
-
     .logo-wrap img {
-      height: 80px;
-      width: 100%;
-      object-fit: contain;
-      display: block;
+      height: 70px;
+      width: auto;
     }
 
     .nav-links {
@@ -86,7 +91,7 @@
     }
 
     .nav-cta {
-      padding: 0.5rem 1rem;
+      padding: 0.55rem 1.2rem;
       border-radius: 999px;
       background: var(--primary);
       color: var(--white);
@@ -100,13 +105,13 @@
 
     /* HERO */
     .hero {
-      background: radial-gradient(circle at top left, #e0edff 0, #f5f7fb 40%, #f5f7fb 100%);
-      padding: 4rem 0 3rem;
+      background: radial-gradient(circle at top left, #e0edff 0, #f5f7fb 40%);
+      padding: 4.5rem 0 3.5rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      grid-template-columns: 3fr 2.5fr;
       gap: 3rem;
       align-items: center;
     }
@@ -121,7 +126,7 @@
     }
 
     .hero-title {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       line-height: 1.15;
       color: var(--primary);
       margin-bottom: 1rem;
@@ -132,10 +137,10 @@
     }
 
     .hero-subtitle {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--muted);
-      max-width: 32rem;
-      margin-bottom: 1.5rem;
+      max-width: 34rem;
+      margin-bottom: 1.75rem;
     }
 
     .hero-badges {
@@ -147,10 +152,10 @@
 
     .badge {
       font-size: 0.75rem;
-      padding: 0.35rem 0.8rem;
+      padding: 0.35rem 0.85rem;
       border-radius: 999px;
       border: 1px solid #d1d5db;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       color: var(--muted);
     }
 
@@ -164,9 +169,9 @@
     .btn-primary {
       background: var(--primary);
       color: var(--white);
-      padding: 0.8rem 1.6rem;
+      padding: 0.85rem 1.7rem;
       border-radius: 999px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
       border: none;
       cursor: pointer;
@@ -179,16 +184,12 @@
     .btn-ghost {
       background: transparent;
       color: var(--primary);
-      padding: 0.8rem 1.2rem;
+      padding: 0.85rem 1.4rem;
       border-radius: 999px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 500;
       border: 1px solid #cbd5f5;
       cursor: pointer;
-    }
-
-    .btn-ghost:hover {
-      background: #e5edff;
     }
 
     .hero-note {
@@ -196,321 +197,108 @@
       color: var(--muted);
     }
 
-    /* HERO RIGHT BOX */
-    .hero-card {
-      background: var(--white);
-      border-radius: 1.25rem;
-      padding: 1.75rem;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
-      border: 1px solid #e5e7eb;
-    }
-
-    .hero-card-title {
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-metric {
+    /* TRUST BAR */
+    .trust-bar {
+      margin-top: 2.5rem;
       display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-metric-label {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-metric-value {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .hero-divider {
-      height: 1px;
-      background: #e5e7eb;
-      margin: 1rem 0;
-    }
-
-    .hero-list {
-      list-style: none;
+      gap: 2rem;
+      flex-wrap: wrap;
       font-size: 0.85rem;
       color: var(--muted);
     }
 
-    .hero-list li {
-      margin-bottom: 0.4rem;
+    .trust-item {
       display: flex;
       align-items: center;
       gap: 0.4rem;
     }
 
-    .hero-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
+    .trust-item span {
+      color: var(--success);
+      font-weight: 700;
     }
 
-    /* SECTION HEADERS */
+    /* SECTIONS */
     section {
-      padding: 3.5rem 0;
+      padding: 3.75rem 0;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .section-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.75rem;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 2.75rem;
     }
 
     .section-title {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       color: var(--primary);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .section-subtitle {
       font-size: 0.95rem;
       color: var(--muted);
-      max-width: 34rem;
+      max-width: 36rem;
       margin: 0 auto;
     }
 
-    /* SERVICES */
-    .grid-3 {
+    /* WHY GRID */
+    .why-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.75rem;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
-    }
-
-    .card-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 999px;
-      background: #e5edff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-size: 1.1rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: var(--primary);
-    }
-
-    .card-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .pill {
-      font-size: 0.75rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      background: #f3f4ff;
-      color: var(--primary);
-    }
-
-    /* SPLIT SECTIONS */
-    .split {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .split-alt {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-    }
-
-    .split-title {
-      font-size: 1.4rem;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
-    }
-
-    .split-text {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .check-list {
-      list-style: none;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .check-list li {
-      margin-bottom: 0.4rem;
-      display: flex;
-      gap: 0.4rem;
-      align-items: flex-start;
-    }
-
-    .check-icon {
-      color: var(--accent);
-      font-weight: 700;
-      margin-top: 0.05rem;
-    }
-
-    /* CTA BAND */
-    .cta-band {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 60%, #1f3f72 100%);
-      color: var(--white);
-      border-radius: 1.25rem;
-      padding: 2rem 2.25rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
     }
 
-    .cta-title {
-      font-size: 1.4rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .cta-text {
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .btn-light {
+    .why-card {
       background: var(--white);
-      color: var(--primary);
-      padding: 0.8rem 1.6rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-outline-light {
-      background: transparent;
-      color: var(--white);
-      padding: 0.8rem 1.4rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      cursor: pointer;
-    }
-
-    /* CONTACT FORM */
-    .contact-form {
-      background: var(--white);
-      padding: 1.5rem;
+      padding: 1.4rem;
       border-radius: 1rem;
       border: 1px solid #e5e7eb;
     }
 
-    .contact-form label {
+    .why-card h4 {
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .why-card p {
       font-size: 0.85rem;
-      display: block;
-      margin-bottom: 0.25rem;
       color: var(--muted);
     }
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.55rem 0.7rem;
-      border-radius: 0.5rem;
-      border: 1px solid #d1d5db;
+    /* FAQ */
+    .faq {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: var(--white);
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    details p {
+      margin-top: 0.6rem;
       font-size: 0.9rem;
-      margin-bottom: 0.9rem;
+      color: var(--muted);
     }
 
     /* FOOTER */
     footer {
       background: #0b1220;
       color: #9ca3af;
-      padding: 2.5rem 0 1.5rem;
+      padding: 2.75rem 0 1.5rem;
       margin-top: 3rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
-      gap: 2rem;
-      font-size: 0.85rem;
-    }
-
-    .footer-logo {
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #e5e7eb;
-      margin-bottom: 0.4rem;
-      font-size: 0.85rem;
-    }
-
-    .footer-sub {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: #6b7280;
-      margin-bottom: 0.8rem;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.35rem;
-    }
-
-    .footer-links a {
-      color: #9ca3af;
-    }
-
-    .footer-links a:hover {
-      color: #e5e7eb;
     }
 
     .footer-bottom {
@@ -526,10 +314,7 @@
 
     @media (max-width: 900px) {
       .hero-grid,
-      .grid-3,
-      .split,
-      .split-alt,
-      .footer-grid {
+      .why-grid {
         grid-template-columns: 1fr;
       }
 
@@ -537,296 +322,129 @@
         display: none;
       }
     }
-
-    @media (max-width: 600px) {
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .cta-band {
-        padding: 1.5rem 1.6rem;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <div class="logo-wrap">
-          <img src="https://aventrabusinesssolutions.github.io/website/aventra-logo.png" alt="Aventra Business Solutions logo" />
-        </div>
-
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#sectors">Sectors</a>
-          <a href="#why">Why Aventra</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <a href="#contact" class="nav-cta">Book a discovery call</a>
-      </nav>
+<header>
+  <div class="container nav">
+    <div class="logo-wrap">
+      <img src="aventra-logo.png" alt="Aventra Business Solutions logo" />
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="hero-kicker">Out-of-hours contact & admin support</div>
-        <h1 class="hero-title">
-          Extra capacity for your business,<br />
-          <span>exactly when you need it.</span>
-        </h1>
-        <p class="hero-subtitle">
-          Aventra Business Solutions provides reliable out-of-hours contact centre and administration assistance,
-          so your customers are supported and your back office keeps moving—long after the lights go off.
-        </p>
-        <div class="hero-badges">
-          <div class="badge">Out-of-hours & overflow cover</div>
-          <div class="badge">UK-based support</div>
-          <div class="badge">Flexible, scalable solutions</div>
-        </div>
-        <div class="hero-actions">
-          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a call</button>
-          <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View our services</button>
-          <span class="hero-note">Typical onboarding in as little as 10–15 working days.</span>
-        </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Aventra</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="nav-cta">Free discovery call</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-kicker">Out-of-hours & overflow support</div>
+      <h1 class="hero-title">
+        Business support that works<br />
+        <span>long after your office closes.</span>
+      </h1>
+      <p class="hero-subtitle">
+        UK-based contact centre and admin support that protects your brand, supports your customers,
+        and gives your team breathing room—without extra headcount.
+      </p>
+
+      <div class="hero-badges">
+        <div class="badge">24/7 coverage</div>
+        <div class="badge">UK-based team</div>
+        <div class="badge">Fast onboarding</div>
       </div>
-      <div>
-        <div class="hero-card">
-          <div class="hero-card-title">Operational at every hour that matters</div>
-          <div class="hero-metric">
-            <div class="hero-metric-label">Coverage</div>
-            <div class="hero-metric-value">24/7</div>
-          </div>
-          <div class="hero-metric">
-            <div class="hero-metric-label">Support channels</div>
-            <div class="hero-metric-value">Phone · Email · Web</div>
-          </div>
-          <div class="hero-divider"></div>
-          <ul class="hero-list">
-            <li><span class="hero-dot"></span> Out-of-hours call handling and message taking</li>
-            <li><span class="hero-dot"></span> Overflow support during peak times</li>
-            <li><span class="hero-dot"></span> Admin assistance and back-office processing</li>
-            <li><span class="hero-dot"></span> Tailored scripts, SLAs and reporting</li>
-          </ul>
-        </div>
+
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="location.href='#contact'">Get a free assessment</button>
+        <button class="btn-ghost" onclick="location.href='#services'">Explore services</button>
+        <span class="hero-note">Onboarding typically in 10–15 working days</span>
+      </div>
+
+      <div class="trust-bar">
+        <div class="trust-item"><span>✓</span> No long-term contracts</div>
+        <div class="trust-item"><span>✓</span> Transparent pricing</div>
+        <div class="trust-item"><span>✓</span> Fully branded scripts</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-kicker">What we do</div>
-        <h2 class="section-title">Out-of-hours contact and admin, done properly.</h2>
-        <p class="section-subtitle">
-          We plug into your existing operation as an extension of your team—protecting your brand, your customers, and your time.
-        </p>
+<section id="why">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Why businesses choose Aventra</h2>
+      <p class="section-subtitle">
+        We’re not a call centre bolt-on. We operate as an extension of your team.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <h4>On-brand handling</h4>
+        <p>Scripts, tone, escalation paths and KPIs aligned to your operation.</p>
       </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <div class="card-icon">☎</div>
-          <h3 class="card-title">Out-of-hours contact centre</h3>
-          <p class="card-text">
-            Professional call handling when your in-house team is offline. We follow your scripts, escalation paths and tone of voice to keep every interaction on-brand.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Message taking</span>
-            <span class="pill">Escalations</span>
-            <span class="pill">Emergency lines</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">📋</div>
-          <h3 class="card-title">Admin & back-office support</h3>
-          <p class="card-text">
-            From inbox management and data entry to booking updates and simple case handling, we keep your admin moving while your team focuses on higher-value work.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Inbox triage</span>
-            <span class="pill">Data entry</span>
-            <span class="pill">Case updates</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">⚙</div>
-          <h3 class="card-title">Overflow & campaign support</h3>
-          <p class="card-text">
-            Need extra capacity for a campaign, seasonal spike or project? We provide flexible, scalable support without the long-term headcount commitment.
-          </p>
-          <div class="pill-row">
-            <span class="pill">Overflow cover</span>
-            <span class="pill">Seasonal peaks</span>
-            <span class="pill">Project support</span>
-          </div>
-        </div>
+      <div class="why-card">
+        <h4>Scalable support</h4>
+        <p>Increase or reduce capacity without recruitment headaches.</p>
+      </div>
+      <div class="why-card">
+        <h4>Clear reporting</h4>
+        <p>Actionable insights, not vanity metrics.</p>
+      </div>
+      <div class="why-card">
+        <h4>Human-first service</h4>
+        <p>No scripts-for-the-sake-of-it. Real conversations.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECTORS & USE CASES -->
-  <section id="sectors">
-    <div class="container split">
-      <div>
-        <h2 class="split-title">Built for busy teams that can’t afford to switch off.</h2>
-        <p class="split-text">
-          Whether you’re managing customers, tenants, patients or clients, Aventra Business Solutions gives you confidence that every call and request is handled with care—even when your office is closed.
-        </p>
-        <ul class="check-list">
-          <li><span class="check-icon">✓</span><span>Professional services: accountants, legal, consultants and agencies.</span></li>
-          <li><span class="check-icon">✓</span><span>Property and facilities: maintenance lines, tenant support, contractors.</span></li>
-          <li><span class="check-icon">✓</span><span>Healthcare and wellbeing: non-clinical admin and contact handling.</span></li>
-          <li><span class="check-icon">✓</span><span>SMEs that need extra hands without extra headcount.</span></li>
-        </ul>
-      </div>
-      <div>
-        <div class="panel panel-highlight">
-          <div class="panel-label">Typical engagement</div>
-          <div class="panel-main">
-            We start with a discovery call, map your workflows and escalation paths, then build scripts and processes that mirror your in-house standards. Once you’re happy, we go live with clear SLAs and reporting agreed upfront.
-          </div>
-          <div class="panel-meta">• Discovery & design · • Pilot period · • Full rollout · • Ongoing optimisation</div>
-        </div>
-      </div>
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Frequently asked questions</h2>
     </div>
-  </section>
 
-  <!-- WHY AVENTRA -->
-  <section id="why">
-    <div class="container split split-alt">
-      <div>
-        <div class="panel">
-          <div class="panel-label">Service promise</div>
-          <div class="panel-main">
-            We behave like an extension of your team—not a bolt-on call centre. That means consistent tone of voice, clear communication, and a focus on outcomes, not just call volumes.
-          </div>
-          <div class="panel-meta">
-            We’ll work with you to define what “good” looks like, then report against it regularly.
-          </div>
-        </div>
-      </div>
-      <div>
-        <h2 class="split-title">Why Aventra Business Solutions?</h2>
-        <p class="split-text">
-          You don’t just need someone to “answer the phones”. You need a partner who understands your business, protects your reputation and gives you back time and headspace.
-        </p>
-        <ul class="check-list">
-          <li><span class="check-icon">✓</span><span>Out-of-hours and overflow cover tailored to your operation.</span></li>
-          <li><span class="check-icon">✓</span><span>Clear, transparent pricing with no hidden extras.</span></li>
-          <li><span class="check-icon">✓</span><span>Scripts, processes and reporting aligned to your KPIs.</span></li>
-          <li><span class="check-icon">✓</span><span>Scalable support as your business grows or peaks seasonally.</span></li>
-        </ul>
-      </div>
+    <div class="faq">
+      <details>
+        <summary>How quickly can we get started?</summary>
+        <p>Most clients are live within 10–15 working days, depending on complexity.</p>
+      </details>
+
+      <details>
+        <summary>Will your team sound like us?</summary>
+        <p>Yes. We build scripts, escalation rules and tone guidelines based on your brand.</p>
+      </details>
+
+      <details>
+        <summary>Is this suitable for small teams?</summary>
+        <p>Absolutely. Many of our clients are SMEs who need cover without full-time hires.</p>
+      </details>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section id="contact">
-    <div class="container">
-      <div class="cta-band">
-        <div>
-          <h2 class="cta-title">Ready to add extra capacity to your business?</h2>
-          <p class="cta-text">
-            Share a few details about your operation and we’ll arrange a no-obligation discovery call to explore how Aventra Business Solutions can support you.
-          </p>
-        </div>
-        <div class="cta-actions">
-          <button class="btn-light">Book a discovery call</button>
-          <button class="btn-outline-light">Request a callback</button>
-        </div>
-      </div>
-
-      <div style="margin-top: 2rem;" class="split">
-        <div>
-          <h3 class="split-title">Tell us about your requirements</h3>
-          <p class="split-text">
-            Use the form below as a starting point. We’ll follow up to clarify anything we need and share a tailored proposal.
-          </p>
-          <form class="contact-form" action="mailto:general@aventrabusinesssolutions.com" method="post" enctype="text/plain">
-            <div style="margin-bottom: 0.9rem;">
-              <label for="name">Name</label>
-              <input id="name" name="Name" type="text" required />
-            </div>
-            <div style="margin-bottom: 0.9rem;">
-              <label for="company">Company</label>
-              <input id="company" name="Company" type="text" />
-            </div>
-            <div style="margin-bottom: 0.9rem;">
-              <label for="email">Email</label>
-              <input id="email" name="Email" type="email" required />
-            </div>
-            <div style="margin-bottom: 0.9rem;">
-              <label for="details">How can we help?</label>
-              <textarea id="details" name="Details" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Submit enquiry</button>
-          </form>
-        </div>
-        <div>
-          <div class="panel">
-            <div class="panel-label">Prefer to talk first?</div>
-            <div class="panel-main">
-              We’re happy to discuss your requirements informally before you commit to anything. Share your preferred time and we’ll work around you.
-            </div>
-            <div class="panel-meta">
-              You can also add a note about your current challenges—out-of-hours cover, overflow, admin backlog, or all of the above.
-            </div>
-          </div>
-        </div>
-      </div>
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Aventra Business Solutions</span>
+      <span>Built for businesses that can’t afford to switch off</span>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <img src="aventra-logo.png" alt="Aventra Business Solutions logo" style="height: 80px; width: auto;" />
-        </div>
-        <div>
-          <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Services</h4>
-          <ul class="footer-links">
-            <li><a href="#services">Out-of-hours contact centre</a></li>
-            <li><a href="#services">Admin & back-office support</a></li>
-            <li><a href="#services">Overflow & campaign support</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Company</h4>
-          <ul class="footer-links">
-            <li><a href="#why">Why Aventra</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Schedule a call back</a></li>
-            <li><a href="#">Privacy & terms</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="color:#e5e7eb;font-size:0.85rem;margin-bottom:0.6rem;">Connect</h4>
-          <ul class="footer-links">
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> Aventra Business Solutions. All rights reserved.</span>
-        <span>Designed for businesses that can’t afford to switch off.</span>
-      </div>
-    </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
-
-
