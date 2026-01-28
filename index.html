@@ -42,12 +42,6 @@
       text-decoration: none;
     }
 
-    a:focus,
-    button:focus {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-
     /* HEADER */
     header {
       background: var(--white);
@@ -67,18 +61,23 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 0;
+      padding: 1.25rem 0;
     }
 
-   .logo-wrap img {
-  height: 100px;
-  width: 100%;
-  object-fit: contain;
-}
+    .logo-wrap {
+      width: 320px;
+    }
+
+    .logo-wrap img {
+      height: 100px;
+      width: 100%;
+      object-fit: contain;
+      display: block;
+    }
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.75rem;
       font-size: 0.9rem;
     }
 
@@ -92,7 +91,7 @@
     }
 
     .nav-cta {
-      padding: 0.55rem 1.2rem;
+      padding: 0.6rem 1.4rem;
       border-radius: 999px;
       background: var(--primary);
       color: var(--white);
@@ -106,13 +105,13 @@
 
     /* HERO */
     .hero {
-      background: radial-gradient(circle at top left, #e0edff 0, #f5f7fb 40%);
-      padding: 4.5rem 0 3.5rem;
+      background: radial-gradient(circle at top left, #e0edff 0, #f5f7fb 45%);
+      padding: 4.75rem 0 3.5rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 3fr 2.5fr;
+      grid-template-columns: 3fr 2.4fr;
       gap: 3rem;
       align-items: center;
     }
@@ -127,7 +126,7 @@
     }
 
     .hero-title {
-      font-size: 2.6rem;
+      font-size: 2.7rem;
       line-height: 1.15;
       color: var(--primary);
       margin-bottom: 1rem;
@@ -170,7 +169,7 @@
     .btn-primary {
       background: var(--primary);
       color: var(--white);
-      padding: 0.85rem 1.7rem;
+      padding: 0.9rem 1.8rem;
       border-radius: 999px;
       font-size: 0.95rem;
       font-weight: 600;
@@ -185,7 +184,7 @@
     .btn-ghost {
       background: transparent;
       color: var(--primary);
-      padding: 0.85rem 1.4rem;
+      padding: 0.9rem 1.5rem;
       border-radius: 999px;
       font-size: 0.95rem;
       font-weight: 500;
@@ -198,12 +197,11 @@
       color: var(--muted);
     }
 
-    /* TRUST BAR */
     .trust-bar {
       margin-top: 2.5rem;
       display: flex;
-      gap: 2rem;
       flex-wrap: wrap;
+      gap: 1.5rem;
       font-size: 0.85rem;
       color: var(--muted);
     }
@@ -219,7 +217,6 @@
       font-weight: 700;
     }
 
-    /* SECTIONS */
     section {
       padding: 3.75rem 0;
     }
@@ -242,59 +239,30 @@
       margin: 0 auto;
     }
 
-    /* WHY GRID */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: var(--white);
+      border-radius: 1.25rem;
+      padding: 2.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       gap: 1.5rem;
     }
 
-    .why-card {
+    .btn-light {
       background: var(--white);
-      padding: 1.4rem;
-      border-radius: 1rem;
-      border: 1px solid #e5e7eb;
-    }
-
-    .why-card h4 {
-      font-size: 0.95rem;
       color: var(--primary);
-      margin-bottom: 0.4rem;
-    }
-
-    .why-card p {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    /* FAQ */
-    .faq {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    details {
-      background: var(--white);
-      border: 1px solid #e5e7eb;
-      border-radius: 0.75rem;
-      padding: 1rem 1.2rem;
-      margin-bottom: 0.75rem;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      color: var(--primary);
-      font-size: 0.95rem;
-    }
-
-    details p {
-      margin-top: 0.6rem;
+      padding: 0.85rem 1.7rem;
+      border-radius: 999px;
       font-size: 0.9rem;
-      color: var(--muted);
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
     }
 
-    /* FOOTER */
     footer {
       background: #0b1220;
       color: #9ca3af;
@@ -314,13 +282,16 @@
     }
 
     @media (max-width: 900px) {
-      .hero-grid,
-      .why-grid {
+      .hero-grid {
         grid-template-columns: 1fr;
       }
 
       .nav-links {
         display: none;
+      }
+
+      .logo-wrap {
+        width: 240px;
       }
     }
   </style>
@@ -331,17 +302,17 @@
 <header>
   <div class="container nav">
     <div class="logo-wrap">
-      <img src="aventra-logo.png" alt="Aventra Business Solutions logo" />
+      <img src="aventra-logo.png" alt="Aventra Business Solutions logo">
     </div>
 
     <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#why">Why Aventra</a>
-      <a href="#faq">FAQs</a>
-      <a href="#contact">Contact</a>
+      <a href="services.html">Services</a>
+      <a href="sectors.html">Sectors</a>
+      <a href="why-aventra.html">Why Aventra</a>
+      <a href="contact.html">Contact</a>
     </div>
 
-    <a href="#contact" class="nav-cta">Free discovery call</a>
+    <a href="contact.html" class="nav-cta">Book a discovery call</a>
   </div>
 </header>
 
@@ -349,87 +320,53 @@
   <div class="container hero-grid">
     <div>
       <div class="hero-kicker">Out-of-hours & overflow support</div>
+
       <h1 class="hero-title">
-        Business support that works<br />
+        Business support that works<br>
         <span>long after your office closes.</span>
       </h1>
+
       <p class="hero-subtitle">
-        UK-based contact centre and admin support that protects your brand, supports your customers,
-        and gives your team breathing room—without extra headcount.
+        UK-based contact centre and admin support that protects your brand,
+        supports your customers and gives your team breathing room —
+        without adding headcount.
       </p>
 
       <div class="hero-badges">
-        <div class="badge">24/7 coverage</div>
+        <div class="badge">24/7 availability</div>
         <div class="badge">UK-based team</div>
         <div class="badge">Fast onboarding</div>
       </div>
 
       <div class="hero-actions">
-        <button class="btn-primary" onclick="location.href='#contact'">Get a free assessment</button>
-        <button class="btn-ghost" onclick="location.href='#services'">Explore services</button>
-        <span class="hero-note">Onboarding typically in 10–15 working days</span>
+        <button class="btn-primary" onclick="location.href='contact.html'">
+          Get a free assessment
+        </button>
+        <button class="btn-ghost" onclick="location.href='services.html'">
+          View our services
+        </button>
+        <span class="hero-note">Typical onboarding in 10–15 working days</span>
       </div>
 
       <div class="trust-bar">
         <div class="trust-item"><span>✓</span> No long-term contracts</div>
         <div class="trust-item"><span>✓</span> Transparent pricing</div>
-        <div class="trust-item"><span>✓</span> Fully branded scripts</div>
+        <div class="trust-item"><span>✓</span> Fully on-brand scripts</div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="why">
+<section>
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Why businesses choose Aventra</h2>
-      <p class="section-subtitle">
-        We’re not a call centre bolt-on. We operate as an extension of your team.
-      </p>
-    </div>
-
-    <div class="why-grid">
-      <div class="why-card">
-        <h4>On-brand handling</h4>
-        <p>Scripts, tone, escalation paths and KPIs aligned to your operation.</p>
+    <div class="cta-band">
+      <div>
+        <h2>Not sure what support you need?</h2>
+        <p>
+          We’ll help you design the right setup in a no-obligation discovery call.
+        </p>
       </div>
-      <div class="why-card">
-        <h4>Scalable support</h4>
-        <p>Increase or reduce capacity without recruitment headaches.</p>
-      </div>
-      <div class="why-card">
-        <h4>Clear reporting</h4>
-        <p>Actionable insights, not vanity metrics.</p>
-      </div>
-      <div class="why-card">
-        <h4>Human-first service</h4>
-        <p>No scripts-for-the-sake-of-it. Real conversations.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Frequently asked questions</h2>
-    </div>
-
-    <div class="faq">
-      <details>
-        <summary>How quickly can we get started?</summary>
-        <p>Most clients are live within 10–15 working days, depending on complexity.</p>
-      </details>
-
-      <details>
-        <summary>Will your team sound like us?</summary>
-        <p>Yes. We build scripts, escalation rules and tone guidelines based on your brand.</p>
-      </details>
-
-      <details>
-        <summary>Is this suitable for small teams?</summary>
-        <p>Absolutely. Many of our clients are SMEs who need cover without full-time hires.</p>
-      </details>
+      <a href="contact.html" class="btn-light">Book a discovery call</a>
     </div>
   </div>
 </section>
@@ -449,4 +386,3 @@
 
 </body>
 </html>
-
