@@ -1,75 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Our Services | Aventra Business Solutions</title>
-  <meta name="description" content="Out-of-hours contact centre, admin support and overflow services tailored to your business." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore Aventra Business Solutions' UK-based services including out-of-hours call handling, overflow support, and admin assistance." />
+    <title>Services | Aventra Business Solutions</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f9fb;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .section {
+            padding: 80px 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #4a6cf7;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        table th, table td {
+            padding: 16px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        table th {
+            background: #eef1f7;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #4a6cf7;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #1a1f36;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #9bb1ff;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-<header>…same header as index.html…</header>
+<header>
+    <div class="logo">
+        <strong>Aventra Business Solutions</strong>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="sectors.html">Sectors</a>
+        <a href="why-aventra.html">Why Aventra</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<section class="hero">
-  <div class="container">
-    <h1 class="hero-title">Our Services</h1>
-    <p class="hero-subtitle">
-      Reliable, on-brand support that keeps your business responsive — even when your team is offline.
+<section class="section">
+    <h1>Our Services</h1>
+    <p style="text-align:center; max-width:700px; margin:auto; font-size:1.1rem;">
+        Flexible, UK-based support designed to keep your business running smoothly — day or night.
     </p>
-  </div>
-</section>
 
-<section>
-  <div class="container grid-3">
-    <div class="card">
-      <h3>Out-of-hours contact centre</h3>
-      <p>
-        We handle calls, emails and web enquiries outside of your standard working hours,
-        following your scripts and escalation rules precisely.
-      </p>
-      <ul class="check-list">
-        <li>Emergency & priority call handling</li>
-        <li>Message taking & escalation</li>
-        <li>24/7 or evening/weekend cover</li>
-      </ul>
+    <div class="services-grid">
+
+        <div class="card">
+            <div class="icon">📞</div>
+            <h3>Out-of-Hours Call Handling</h3>
+            <p>Stay responsive 24/7 with trained UK-based agents who follow your scripts and escalation paths exactly.</p>
+            <ul>
+                <li>Emergency triage</li>
+                <li>Tenant and customer support</li>
+                <li>Engineer callouts</li>
+                <li>Custom scripts and workflows</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="icon">📈</div>
+            <h3>Overflow Call Support</h3>
+            <p>When your team is busy, we step in seamlessly to maintain fast response times and prevent missed calls.</p>
+            <ul>
+                <li>Peak-time call handling</li>
+                <li>Queue reduction</li>
+                <li>Customer updates</li>
+                <li>Full reporting and analytics</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="icon">🗂️</div>
+            <h3>Admin & Back Office Support</h3>
+            <p>Professional administrative support to keep your operations running smoothly behind the scenes.</p>
+            <ul>
+                <li>Inbox management</li>
+                <li>Scheduling & bookings</li>
+                <li>Customer follow-ups</li>
+                <li>Data entry & reporting</li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="card">
-      <h3>Admin & back-office support</h3>
-      <p>
-        Keep workflows moving overnight or during peak demand without adding internal headcount.
-      </p>
-      <ul class="check-list">
-        <li>Inbox & case management</li>
-        <li>Data entry & CRM updates</li>
-        <li>Booking & request processing</li>
-      </ul>
+    <h2>Service Comparison</h2>
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Out-of-Hours</th>
+            <th>Overflow</th>
+            <th>Admin Support</th>
+        </tr>
+        <tr>
+            <td>24/7 Coverage</td>
+            <td>✔</td>
+            <td>Optional</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>Custom Scripts</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <td>Emergency Escalation</td>
+            <td>✔</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>Admin Tasks</td>
+            <td>—</td>
+            <td>—</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <td>Reporting</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+    </table>
+
+    <div style="text-align:center;">
+        <a href="contact.html" class="btn-primary">Book a Discovery Call</a>
     </div>
 
-    <div class="card">
-      <h3>Overflow & campaign support</h3>
-      <p>
-        Scale support instantly during seasonal spikes, marketing campaigns or unexpected demand.
-      </p>
-      <ul class="check-list">
-        <li>Overflow call handling</li>
-        <li>Short-term project support</li>
-        <li>No long-term commitment</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
-<section class="cta-band">
-  <div class="container">
-    <h2>Not sure which service fits?</h2>
-    <p>We’ll help you design the right setup in a free discovery call.</p>
-    <a href="contact.html" class="btn-light">Book a discovery call</a>
-  </div>
-</section>
+<footer>
+    <p>© 2026 Aventra Business Solutions</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="why-aventra.html">Why Aventra</a></p>
+</footer>
 
-<footer>…same footer…</footer>
 </body>
 </html>
